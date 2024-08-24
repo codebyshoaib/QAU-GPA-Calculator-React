@@ -13,7 +13,7 @@ function App() {
       <Calculator />
       <p>
         Developed with <FontAwesomeIcon icon={faHeart} color="#A52A2A" /> by{" "}
-        <b><span >Shoaib</span></b>
+        <b><span> <a href="https://facebook.com/j.shoaib2">Shoaib</a></span></b>
       </p>
     </div>
   );
