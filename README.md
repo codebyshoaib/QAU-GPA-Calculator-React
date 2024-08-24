@@ -7,3 +7,4 @@ You can delete any item (completed or pending)
 You get a total of completed items and overall items on the list.
 You can move list items "Up" or "Down" using buttons.
 
+![image](https://github.com/user-attachments/assets/9e1ab06e-d820-4632-b3f7-1144efd69bb6)
