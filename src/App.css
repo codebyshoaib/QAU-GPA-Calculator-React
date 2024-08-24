@@ -54,8 +54,8 @@ body {
   align-items: center;
 }
 
-.appDiv span {
-  color: #55a755;
+.appDiv span a{
+  color: #088f66;
   font-weight: 600;
 }
 
@@ -152,7 +152,6 @@ h1 {
   cursor: pointer;
 }
 
-/* CSS Animations */
 .course-enter {
   opacity: 0;
   transform: translateY(-20px);
@@ -240,7 +239,7 @@ h1 {
   .gpa-display h2{
     font-size: .7rem;
   }
-  .appDiv p{
+  .appDiv p {
     font-size: .9rem;
   }
 }
