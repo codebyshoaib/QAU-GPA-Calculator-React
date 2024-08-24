@@ -26,21 +26,21 @@ function CourseForm({ addCourse }) {
       <input
         value={name}
         type="text"
-        placeholder="Course Name"
+        placeholder="Course"
         className="course-name"
         onChange={handleChange(setName)}
       />
       <input
         value={marks}
         type="number"
-        placeholder="Obt. Marks"
+        placeholder="Marks"
         className="marks"
         onChange={handleChange(setMarks)}
       />
       <input
         value={credits}
         type="number"
-        placeholder="Credit Hrs."
+        placeholder="Credits"
         className="credits"
         onChange={handleChange(setCredits)}
       />
