@@ -202,3 +202,45 @@ h1 {
   opacity: 0;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
+
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .course-form input,.courseList .name,
+  .courseList .marks,
+  .courseList .credits {
+    width: 130px;
+  }
+  
+}
+@media  (min-width: 300px) and (max-width: 767px) {
+  #root{
+    overflow: hidden;
+  }
+  .CalculatorWrapper{
+    width: 90%;
+  }
+  .course-form input,.courseList .name,
+  .courseList .marks,
+  .courseList .credits {
+    width: 80px;
+    font-size: .5rem;
+  }
+  .course-form,.courseList{
+    column-gap: 5px;
+  }
+  .add-btn{
+    padding: 0.5rem .4rem;
+    font-size: 0.6rem;
+    margin-left: 5px;
+  }
+  .btns {
+    font-size: .7rem;
+  }
+  .gpa-display h2{
+    font-size: .7rem;
+  }
+  .appDiv p{
+    font-size: .6rem;
+  }
+}
