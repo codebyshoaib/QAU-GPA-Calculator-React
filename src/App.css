@@ -29,40 +29,60 @@ body {
   color: white;
   font-weight: 600;
 }
+.courseList{
+  display: flex;
+  justify-content: flex-start;
+  column-gap:20px;
+ margin-bottom: 1rem;
+  align-items: center;
+  color: white;
+}
+
+.courseList .name,.courseList .marks,.courseList .credits{
+  width: 200px;
+  padding: 20px;
+  outline: 1px solid  #8758ff;
+}
 h1 {
   color: #fff;
   margin-bottom: 0.5rem;
   font-size: 1.75rem;
 }
 
-.TodoWrapper {
+.CalculatorWrapper {
   background: #1A1A40;
  
   padding: 2rem;
   border-radius: 5px;
 }
 
-.TodoForm {
+
+.course-form {
   width: 100%;
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
 }
-
-.todo-input {
+.course-form input{
   outline: none;
   background: none;
   border: 1px solid #8758ff;
   padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  width: 300px;
+ 
+  width: 200px;
   color: #fff;
 }
 
-.todo-input::placeholder {
-  color: #ffffff4d;
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.todo-btn {
+.add-btn {
   background: #8758ff;
   color: #fff;
   border: none;
@@ -72,7 +92,7 @@ h1 {
   margin-left: 20px;
 }
 
-.Todo {
+.Course {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,7 +134,7 @@ h1 {
   }
 }
 
-.Todo {
+.Course {
   animation: fadeIn 0.5s ease-in-out;;
 }
 
@@ -129,6 +149,6 @@ h1 {
   }
 }
 
-.Todo.exiting {
+.Course.exiting {
   animation: fadeOut 0.5s ease-in forwards; 
 }
