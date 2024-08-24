@@ -1,3 +1,5 @@
+import { faAdd } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 function CourseForm({ addCourse }) {
@@ -43,7 +45,7 @@ function CourseForm({ addCourse }) {
         onChange={handleChange(setCredits)}
       />
       <button type="submit" className="add-btn">
-        Add Course
+       <FontAwesomeIcon icon={faAdd}/>
       </button>
     </form>
   );
