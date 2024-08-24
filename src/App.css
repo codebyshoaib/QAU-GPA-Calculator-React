@@ -224,7 +224,7 @@ h1 {
   .courseList .marks,
   .courseList .credits {
     width: 95px;
-    font-size: .6rem;
+    font-size: .8rem;
   }
   .course-form,.courseList{
     column-gap: 5px;
