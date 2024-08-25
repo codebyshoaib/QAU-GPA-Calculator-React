@@ -292,6 +292,11 @@ h3{
   }
   .btns {
     font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
   }
   .gpa-display h2{
     font-size: .7rem;
