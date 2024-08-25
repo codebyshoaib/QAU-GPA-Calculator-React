@@ -28,6 +28,7 @@ function CourseForm({ addCourse }) {
         type="text"
         placeholder="Course"
         className="course-name"
+        required
         onChange={handleChange(setName)}
       />
       <input
@@ -35,6 +36,10 @@ function CourseForm({ addCourse }) {
         type="number"
         placeholder="Marks"
         className="marks"
+        max={100}
+        min={0}
+        required
+       
         onChange={handleChange(setMarks)}
       />
       <input
@@ -42,6 +47,9 @@ function CourseForm({ addCourse }) {
         type="number"
         placeholder="Credits"
         className="credits"
+        max={4}
+        min={1}
+        required
         onChange={handleChange(setCredits)}
       />
       <button type="submit" className="add-btn">

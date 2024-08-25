@@ -13,7 +13,7 @@ function CourseList({ course, editCourse, deleteCourse }) {
       <div className="credits">
         <p>{course.credits}</p>
       </div>
-      <div className='f-icons'>
+      <div className='f-icons no-print' >
         <FontAwesomeIcon
           onClick={() => editCourse(course.id)}
           icon={faPenToSquare}

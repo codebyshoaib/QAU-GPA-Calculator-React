@@ -118,10 +118,51 @@ h1 {
 .btns {
   display: flex;
   justify-content: center;
+  column-gap: 4rem;
   align-items: center;
   margin-bottom: 2rem;
 }
+.btns button:focus{
+border: 1px solid #55a755;
+outline: none;
+}
+.btns button:hover{
+  background:#55a755;
+  color: white;
+  outline: none;
+  border: 1px solid #55a755;
+  transition: all .3s ease;
+}
+.print-bt {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
 
+.print-bt-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.print-bt-enter-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.print-bt-enter-done {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.print-bt-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.print-bt-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+}
 .add-btn {
   background: #55a755;
   color: white;
@@ -189,6 +230,11 @@ h1 {
   overflow: hidden;
   transition: min-height 0.3s ease-out;
 }
+h3{
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
 
 .CourseList {
   max-height: 100px;
@@ -202,6 +248,17 @@ h1 {
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
 
+/* App.css */
+.fade-appear, .fade-enter {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.fade-appear-active, .fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .5s, transform .5s;
+}
 
 
 @media (min-width: 600px) and (max-width: 1024px) {
@@ -241,5 +298,14 @@ h1 {
   }
   .appDiv p {
     font-size: .9rem;
+  }
+}
+@media print {
+  body {
+    -webkit-print-color-adjust: exact; 
+    print-color-adjust: exact; 
+  }
+  .no-print{
+    display: none;
   }
 }

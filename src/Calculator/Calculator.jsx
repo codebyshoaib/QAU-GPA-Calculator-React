@@ -25,9 +25,10 @@ function Calculator() {
       course.id === id ? { ...course, isRemoving: true } : course
     );
     setCourses(updatedCourses);
+    
 
     setTimeout(() => {
-      setCourses(prevCourses => prevCourses.filter(course => course.id !== id));
+      setCourses(prevCourses => prevCourses.filter(course=> course.id !== id));
     }, 300);
   };
 
@@ -66,32 +67,47 @@ function Calculator() {
 
   return (
     <div className="CalculatorWrapper">
+      <div className="no-print">
       <CourseForm addCourse={addCourse} />
-      <TransitionGroup>
-        {courses.map(course =>
-          <CSSTransition
-            key={course.id}
-            timeout={500}
-            classNames="course"
-          >
-            {course.isEditing ? (
-              <EditForm editCourse={editCourse} course={course} />
-            ) : (
-              <CourseList
-                course={course}
-                editCourse={editCourse}
-                deleteCourse={deleteCourse}
-                className={course.isRemoving ? 'removing' : ''}
-              />
-            )}
-          </CSSTransition>
-        )}
-      </TransitionGroup>
-      <div className="btns">
+      </div>
+        <TransitionGroup>
+          <h3>{courses.length!==0 ? `Your Courses`:'No Course Added Yet'}</h3>
+          {courses.map(course =>
+            <CSSTransition
+              key={course.id}
+              timeout={500}
+              classNames="course"
+            >
+              {course.isEditing ? (
+                <EditForm editCourse={editCourse} course={course} />
+              ) : (
+                <CourseList
+                  course={course}
+                  editCourse={editCourse}
+                  deleteCourse={deleteCourse}
+                  className={course.isRemoving ? 'removing' : ''}
+                />
+              )}
+            </CSSTransition>
+          )}
+        </TransitionGroup>
+
+      <div className="btns no-print">
         <button className="clc-bt" onClick={calculateGPA}>Calculate GPA</button>
+        <CSSTransition
+          in={gpa !== null}
+          timeout={500}
+          classNames="print-bt"
+          unmountOnExit
+          appear
+        >
+          <button className="print-bt" onClick={()=>{
+            window.print();
+          }}>Print Data</button>
+        </CSSTransition>
       </div>
       {gpa !== null && (
-        <div className="gpa-display">
+        <div className="gpa-display" >
           <h2>GPA: {gpa}</h2>
         </div>
       )}
